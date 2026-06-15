@@ -19,6 +19,7 @@ Give it a candidates.jsonl file and a target JD. It returns a submission.csv wit
 ---
 
 Scoring Model:
+
 1) Candidates are evaluated across two categories: technical signals and behavioral signals.
 2) Technical signals
 3) Years of experience (preferred range: 5 to 9 years)
@@ -42,6 +43,7 @@ Scoring Model:
 ---
 
 Explainability:
+
 a) Every ranked candidate gets a reasoning statement derived only from their profile data. No generated facts, no assumptions, no hallucinations.
 Example output:
 "7.8 years experience as Search Engineer at Google. Demonstrated experience in production search systems, retrieval systems, ranking models, and embedding-based retrieval."
@@ -50,10 +52,12 @@ b) Recruiters can cross-check every statement against the source profile. The re
 ---
 
 Architecture:
+
 1) candidates.jsonl -> Candidate Loader -> Feature Extraction -> Scoring Engine -> Ranking Engine -> Reasoning Generator -> CSV Generator -> submission.csv
 2) API layer: GET /api/rank triggers the full pipeline and writes submission.csv.
    
 Components:
+
 1) candidateLoader.js streams the JSONL file using Node's readline API, so memory usage stays flat regardless of dataset size.
 2) scoringService.js applies the weighted framework across all signal dimensions.
 3) Ranking controller sorts candidates by composite score in descending order.
@@ -62,6 +66,7 @@ Components:
 ---
 
 Tech Stack:
+
 a) Node.js + Express.js for the backend API.
 b) JSONL streaming via readline and the native File System module.
 c) csv-writer for output generation.
@@ -72,7 +77,8 @@ No GPU required. No external ML infrastructure. The entire pipeline runs on a st
 
 ---
 
-Output Format
+Output Format:
+
 1) The submission.csv contains four columns:
 2) candidate_id: unique identifier from the source dataset
 3) rank: position in the final shortlist (1 to 100)
@@ -81,7 +87,8 @@ Output Format
 
 ---
 
-Performance
+Performance:
+
 a) Processes 100,000 candidate profiles per run
 b) Memory-efficient streaming, no full dataset loaded into memory
 c) Fast execution on standard hardware
@@ -90,6 +97,7 @@ d) Top candidates consistently show search engineering backgrounds, retrieval an
 ---
 
 Running Locally:
+
 1) Clone the repository
 2) git clone https://github.com/your-org/resanalyzer.git
 3) cd resanalyzer
@@ -107,6 +115,7 @@ This runs the full pipeline and writes submission.csv to the output directory.
 ---
 
 Future Work:
+
 a) LLM-based semantic resume analysis for deeper signal extraction
 b) ML ranking models trained on historical recruiter decisions
 c) Recruiter dashboard with filter and drill-down
