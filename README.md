@@ -4,10 +4,13 @@ Intelligent Candidate Ranking Engine
 ResAnalyzer ranks candidates from a large JSONL dataset against a Job Description.
 It does not match keywords. It evaluates dimensions.
 Team: 99 Little Bugs
-Team Members: Ayaan Khan (Leader)
-              Shrestha S Gupta
-              Mohd. Fazal
-              Avi Saxena
+
+Team Members: 
+
+a) Ayaan Khan (Leader)              
+b) Shrestha S Gupta
+c) Mohd. Fazal
+d) Avi Saxena
 
 ---
 
