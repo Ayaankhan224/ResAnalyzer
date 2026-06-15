@@ -47,10 +47,10 @@ Scoring Model:
 
 Explainability:
 
-a) Every ranked candidate gets a reasoning statement derived only from their profile data. No generated facts, no assumptions, no hallucinations.
+Every ranked candidate gets a reasoning statement derived only from their profile data. No generated facts, no assumptions, no hallucinations.
 Example output:
 "7.8 years experience as Search Engineer at Google. Demonstrated experience in production search systems, retrieval systems, ranking models, and embedding-based retrieval."
-b) Recruiters can cross-check every statement against the source profile. The reasoning is transparent by design.
+Recruiters can cross-check every statement against the source profile. The reasoning is transparent by design.
 
 ---
 
@@ -61,10 +61,10 @@ Architecture:
    
 Components:
 
-1) candidateLoader.js streams the JSONL file using Node's readline API, so memory usage stays flat regardless of dataset size.
-2) scoringService.js applies the weighted framework across all signal dimensions.
-3) Ranking controller sorts candidates by composite score in descending order.
-4) csvGenerator.js writes the top 100 to a structured CSV with candidate_id, rank, score, and reasoning.
+1) candidateLoader.js: streams the JSONL file using Node's readline API, so memory usage stays flat regardless of dataset size.
+2) scoringService.js: applies the weighted framework across all signal dimensions.
+3) Ranking controller: sorts candidates by composite score in descending order.
+4) csvGenerator.js: writes the top 100 to a structured CSV with candidate_id, rank, score, and reasoning.
 
 ---
 
