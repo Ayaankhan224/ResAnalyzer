@@ -8,8 +8,8 @@ Team: 99 Little Bugs
 Team Members: 
 
 a) Ayaan Khan (Leader)              
-b) Shrestha S Gupta
-c) Mohd. Fazal
+b) Shrestha S Gupta\
+c) Mohd. Fazal\
 d) Avi Saxena
 
 ---
@@ -47,9 +47,9 @@ Scoring Model:
 
 Explainability:
 
-Every ranked candidate gets a reasoning statement derived only from their profile data. No generated facts, no assumptions, no hallucinations.
+Every ranked candidate gets a reasoning statement derived only from their profile data. No generated facts, no assumptions, no hallucinations.\
 Example output:
-"7.8 years experience as Search Engineer at Google. Demonstrated experience in production search systems, retrieval systems, ranking models, and embedding-based retrieval."
+"7.8 years experience as Search Engineer at Google. Demonstrated experience in production search systems, retrieval systems, ranking models, and embedding-based retrieval."\
 Recruiters can cross-check every statement against the source profile. The reasoning is transparent by design.
 
 ---
@@ -90,9 +90,9 @@ Output Format:
 
 Performance:
 
-a) Processes 100,000 candidate profiles per run
-b) Memory-efficient streaming, no full dataset loaded into memory
-c) Fast execution on standard hardware
+a) Processes 100,000 candidate profiles per run\
+b) Memory-efficient streaming, no full dataset loaded into memory\
+c) Fast execution on standard hardware\
 d) Top candidates consistently show search engineering backgrounds, retrieval and ranking experience, and vector database exposure
 
 ---
@@ -111,10 +111,10 @@ This runs the full pipeline and writes submission.csv to the output directory.
 
 Future Work:
 
-a) LLM-based semantic resume analysis for deeper signal extraction
-b) ML ranking models trained on historical recruiter decisions
-c) Recruiter dashboard with filter and drill-down
-d)Real-time ranking updates as new candidates are added
+a) LLM-based semantic resume analysis for deeper signal extraction\
+b) ML ranking models trained on historical recruiter decisions\
+c) Recruiter dashboard with filter and drill-down\
+d)Real-time ranking updates as new candidates are added\
 e) Candidate-to-JD matching across multiple open roles simultaneously
 
 ---
