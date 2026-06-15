@@ -73,8 +73,6 @@ Tech Stack:
 a) Node.js + Express.js for the backend API.
 b) JSONL streaming via readline and the native File System module.
 c) csv-writer for output generation.
-d) cors and dotenv for configuration.
-e) nodemon for development.
 
 No GPU required. No external ML infrastructure. The entire pipeline runs on a standard Node.js process.
 
@@ -101,17 +99,11 @@ d) Top candidates consistently show search engineering backgrounds, retrieval an
 
 Running Locally:
 
-1) Clone the repository
-2) git clone https://github.com/your-org/resanalyzer.git
-3) cd resanalyzer
-4) Install dependencies
-5) npm install
-6) Add your dataset
-7) Place your candidates.jsonl file inside the data/ directory.
-8) Start the server
-9) npm run dev
-10) Trigger ranking
-11) GET http://localhost:3000/api/rank
+1) Clone the repository through git clone https://github.com/your-org/resanalyzer.git
+2) Install dependencies through npm install
+3) Place your candidates.jsonl file inside the data/ directory.
+4) Start the server through npm run dev
+5) GET at http://localhost:3000/api/rank
     
 This runs the full pipeline and writes submission.csv to the output directory.
 
