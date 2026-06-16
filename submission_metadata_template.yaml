@@ -1,0 +1,48 @@
+# Hugging Face Spaces Deployment Configuration
+sdk: docker                   
+app_port: 7860                
+
+# Project & Development Team Metadata
+metadata:
+  project_name: "resanalyzer"  
+  version: "1.0.0"             
+  license: "ISC"               
+  tagline: "Intelligent Candidate Ranking Engine"
+  team_name: "99 Little Bugs"
+  
+  team_members:
+    - name: "Ayaan Khan"
+      role: "Team Leader"
+    - name: "Shrestha S Gupta"
+      role: "Core Developer"
+    - name: "Mohd. Fazal"
+      role: "Core Developer"
+    - name: "Avi Saxena"
+      role: "Core Developer"
+
+# Technical Stack Environment Specs
+architecture:
+  runtime: "Node.js (v20-slim)" 
+  framework: "Express.js"       
+  entry_point: "server.js"      
+  hardware_requirement: "Standard CPU (No GPU Required)"
+  
+  # Core tracking dependencies required by engine layers
+  dependencies:
+    express: "^5.2.1"          
+    cors: "^2.8.6"             
+    csv-writer: "^1.6.0"       
+    jsonlines: "^0.1.1"        
+    multer: "^2.1.1"           
+    dotenv: "^17.4.2"          
+
+  pipeline_flow:
+    - step_1: "candidateLoader.js (Stream processing via Readline API)"
+    - step_2: "scoringService.js (Weighted signal category framework)"
+    - step_3: "Ranking controller (Descending composite score sort)"
+    - step_4: "csvGenerator.js (Compiles top 100 entries to submission.csv)"
+
+# Functional API Application Routing Gateway
+endpoints:
+  base_route: "https://white1290-rez-analyzer.hf.space/api/rank"      
+  pipeline_trigger: "GET /api/rank"
