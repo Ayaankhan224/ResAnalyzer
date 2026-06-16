@@ -103,7 +103,7 @@ Running Locally:
 2) Install dependencies through npm install
 3) Place your candidates.jsonl file inside the data/ directory.
 4) Start the server through npm run dev
-5) GET at http://localhost:3000/api/rank
+5) GET at https://white1290-rez-analyzer.hf.space/api/rank
     
 This runs the full pipeline and writes submission.csv to the output directory.
 
